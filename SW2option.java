@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class SW2option {
 
-//THIS PART IS FOR THE RECEIPT
+//THIS PART IS FOR THE RECEIPT AND THIS PART WAS CALLED IN LINE 156 IN THE PRIVATE jehotianRandomString
 public static void jehoReceipt(String name, int validAmount, int otp, String jcode) {
     SimpleDateFormat formatter = new SimpleDateFormat("MM -dd -yyyy HH:mm:ss");
     String dateTime = formatter.format(new Date());
@@ -64,7 +64,7 @@ public static void jehoReceipt(String name, int validAmount, int otp, String jco
 
         String address = JOptionPane.showInputDialog("Enter your address: ");
         while (address == null || address.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Address should not be empty. Please enter your address.");
+            JOptionPane.showMessageDialog(null, "Addres should not be empty. Please enter your address.");
             address = JOptionPane.showInputDialog("Enter your address: ");
         }
 

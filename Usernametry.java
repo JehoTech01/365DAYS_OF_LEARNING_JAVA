@@ -1,9 +1,8 @@
 
-import java.util.Scanner;
 
 
 
-public class Usernametry {
+
 
   /*public static void informationManager() {
     String name = JOptionPane.showInputDialog("Enter your name: ");
@@ -42,47 +41,19 @@ public class Usernametry {
 
     String pasString = JOptionPane.showInputDialog("Register your password: ");
   }*/
+
+//METHOD TO CALCULATE THE AVERAGE GRADE
+  public class Usernametry {
+  public static int calcAve(float[]grades){
+    
+   int sum = 0;
+    for(float grade: grades){
+      sum += grade;
+    }
+    return sum/grades.length;
+  }
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
 
-    int numb1 = 5;
-
-    System.out.print("Enter a number(1-5): ");
-    int num1 = scanner.nextInt();
-
-    switch (num1){
-      case 1:
-          System.out.println("It is Monday");
-          break;
-      case 2:
-          System.out.println("It is Tuesday"); 
-          break;
-      case 3:
-          System.out.println("It is Wednesday");
-          break;
-      case 4:
-          System.out.println("It is Thursday");
-          break;
-      case 5:
-          System.out.println("It is Friday");
-          break;
-          default:
-          System.out.println("It is Weekend");
-    }
-
-
-
-    if (num1 == null || num1.trim || num1.isEmpty) {
-      System.out.println("");
-        
-    } else {
-    }
-
-
-
-    scanner.close();
-    
-    
 
   }
 }

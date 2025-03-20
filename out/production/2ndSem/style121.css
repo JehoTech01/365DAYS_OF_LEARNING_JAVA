@@ -1,0 +1,143 @@
+/* Created by ᎢㅤᏆㅤᎷㅤᎬㅤ✨ */
+
+
+
+/* General Styles */
+Body {
+  Font-family: ‘Arial’, sans-serif;
+  Margin: 0;
+  Padding: 0;
+  Background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  Color: #333;
+  Display: flex;
+  Justify-content: center;
+  Align-items: center;
+  Min-height: 100vh;
+  Flex-direction: column;
+  Text-align: center;
+}
+
+/* Navigation Bar Styles */
+Nav ul {
+  List-style: none;
+  Padding: 0;
+  Margin: 20px 0;
+  Display: flex;
+  Background-color: #333;
+  Border-radius: 50px;
+  Overflow: hidden;
+  Box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+Nav ul li {
+  Flex-grow: 1;
+}
+
+Nav ul li a {
+  Display: block;
+  Padding: 15px;
+  Color: white;
+  Text-decoration: none;
+  Text-transform: uppercase;
+  Font-weight: bold;
+  Text-align: center;
+  Transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+Nav ul li a:hover {
+  Background-color: #007BFF;
+  Color: #fff;
+}
+
+/* Tool Container */
+.tool {
+  Display: none;
+  Width: 80%;
+  Max-width: 600px;
+  Margin: 20px auto;
+  Padding: 20px;
+  Background: rgba(255, 255, 255, 0.8);
+  Border-radius: 10px;
+  Box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  Animation: fadeIn 1s ease-in-out;
+}
+
+/* Glow effect for input boxes and buttons */
+Input, textarea {
+  Width: 100%;
+  Margin: 10px 0;
+  Padding: 12px;
+  Border-radius: 5px;
+  Border: 1px solid #ccc;
+  Box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  Transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+Input:focus, textarea:focus {
+  Background-color: cyan;
+  Box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  Outline: none;
+}
+
+Button {
+  Padding: 12px 20px;
+  Margin: 10px 5px;
+  Border-radius: 5px;
+  Border: none;
+  Background-color: #007BFF;
+  Color: white;
+  Font-weight: bold;
+  Cursor: pointer;
+  Box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  Transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+Button:hover {
+  Background-color: #0056b3;
+  Box-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+}
+
+/* Text Styles */
+H2 {
+  Font-size: 24px;
+  Margin-bottom: 20px;
+  Color: #007BFF;
+}
+
+P {
+  Font-size: 18px;
+  Margin-top: 20px;
+  Color: #333;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  From {
+      Opacity: 0;
+      Transform: translateY(20px);
+  }
+  To {
+      Opacity: 1;
+      Transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  Nav ul {
+      Flex-direction: column;
+      Border-radius: 20px;
+  }
+
+  Nav ul li {
+      Width: 100%;
+  }
+
+  Nav ul li a {
+      Padding: 12px;
+  }
+
+  .tool {
+      Width: 90%;
+  }
+}
