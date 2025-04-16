@@ -32,6 +32,7 @@ public static void jehoReceipt(String name, int validAmount, int otp, String jco
 
         // Keep asking until the user enters a valid name (letters only, no numbers)
         while (name == null || name.trim().isEmpty() || name.matches(".*\\d.*")) {
+            if (name == null) System.exit(0);
             if (name == null || name.trim().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Name should not be empty. Please enter your name.");
             } else if (name.matches(".*\\d.*")) {
@@ -43,6 +44,7 @@ public static void jehoReceipt(String name, int validAmount, int otp, String jco
         String age = JOptionPane.showInputDialog("Enter your age: ");
          int old = 0;
         while (true) {
+            if (age == null) System.exit(0);
             if (age == null || age.trim().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Age should not be empty. Please enter your age.");
                 age = JOptionPane.showInputDialog("Enter your age: ");
@@ -63,6 +65,7 @@ public static void jehoReceipt(String name, int validAmount, int otp, String jco
         }
 
         String address = JOptionPane.showInputDialog("Enter your address: ");
+        if (address == null) System.exit(0);
         while (address == null || address.trim().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Address should not be empty. Please enter your address.");
             address = JOptionPane.showInputDialog("Enter your address: ");
@@ -70,6 +73,7 @@ public static void jehoReceipt(String name, int validAmount, int otp, String jco
 
         //Restriction: must be exactly 11 digits
         String contactNumber = JOptionPane.showInputDialog("Enter your contact number: ");
+        if (contactNumber == null) System.exit(0);
         while (contactNumber == null || contactNumber.length() != 11 || !contactNumber.matches("\\d+")) {
             JOptionPane.showMessageDialog(null, "Invalid contact number! Please enter exactly 11 digits.");
             contactNumber = JOptionPane.showInputDialog("Enter your contact number: ");
