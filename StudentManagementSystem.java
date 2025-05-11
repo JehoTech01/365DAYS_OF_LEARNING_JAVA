@@ -194,14 +194,38 @@ public static float studentAvg(float[] grades) {
         ArrayList<String> Students = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter Student ID: ");
-        String name = sc.nextLine();
 
-        if(Students.contains(name)) {
-            System.out.println("Student found");
-        } else {
-            System.out.println("Student not found");
-        }
+
+            try {
+        System.out.println("Enter Student ID: ");
+        String id = sc.nextLine();
+        
+            try (BufferedReader reader = new BufferedReader(new FileReader("StudentInfo.txt"))) {
+                String line;
+
+                while ((line = reader.readLine()) != null) {
+
+                    if (id == null || id.trim().isEmpty() || id.matches(".*\\d.*")) {
+                        System.out.println("Invalid ID");
+                        return;
+                    }
+                    if (line.contains(id)) {
+                        System.out.println("Student found: " + line);
+                        
+                    } else {
+                        System.out.println("Student not found");
+                        return;
+                    }
+                }
+            } catch (IOException e) {
+                System.out.println("An error occurred while searching for the student.");
+                e.printStackTrace();
+            }
+            }finally {
+                System.out.println("SUCCESSFULLY");
+                sc.close();
+            }
+
     }
 
     public static void updateStudent() {
@@ -227,10 +251,10 @@ public static float studentAvg(float[] grades) {
             function1();
             System.out.println("\nPress Enter to continue...");
             new Scanner(System.in).nextLine(); // Wait for Enter key
-
+                
             
         }
-        scanner.close();
+        
     }
 
 }
